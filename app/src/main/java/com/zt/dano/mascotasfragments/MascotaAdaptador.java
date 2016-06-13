@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
 
     ArrayList<Mascota> mascotas;
+
    // ArrayList<Mascota> top5;
 
     public MascotaAdaptador(ArrayList<Mascota> mascotas, FragmentActivity activity){
@@ -25,6 +26,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     @Override
     public MascotaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardv_mascota, parent, false);
 
         return new MascotaViewHolder(v);
@@ -35,6 +37,9 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         Mascota mascota = mascotas.get(position);
         mascotasViewholder.imgFoto.setImageResource(mascota.getFoto());
         mascotasViewholder.cvnombre.setText(mascota.getNombre());
+        mascotasViewholder.tvLikes.setText(mascota.getId());
+
+        mascotasViewholder.tvLikes.setText(String.valueOf(mascota.getLike())+" Likes");
 
     }
 
@@ -46,11 +51,13 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     public static class MascotaViewHolder extends RecyclerView.ViewHolder{
         private ImageView imgFoto;
         private TextView cvnombre;
+        private TextView tvLikes;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
             cvnombre = (TextView) itemView.findViewById(R.id.nomCV);
+            tvLikes = (TextView) itemView.findViewById(R.id.tvLikes);
         }
     }
 

@@ -5,6 +5,7 @@ package com.zt.dano.mascotasfragments;
  */
 public class Mascota {
 
+    private  int id;
     private String nombre;
     private  int foto;
     private int like;
@@ -15,7 +16,9 @@ public class Mascota {
         this.like = like;
     }
 
+    public Mascota() {
 
+    }
 
 
     public int getLike() {
@@ -45,5 +48,13 @@ public class Mascota {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

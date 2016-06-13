@@ -25,7 +25,7 @@
             />
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -43,18 +43,29 @@
                 android:textStyle="bold"
                 android:textSize="30dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="60dp"
                 />
 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLikes"
+                android:layout_centerVertical="true"
+                android:text="Likes"
+                android:textSize="30dp"
+                android:layout_marginLeft="275dp"
+                />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/dogbone"
-                android:layout_marginLeft="150dp"/>
+                android:layout_alignParentRight="true"/>
 
 
-        </LinearLayout>
+
+        </RelativeLayout>
 
 
 
